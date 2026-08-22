@@ -1,0 +1,124 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(to right, #634a24, #cea76d);
+}
+.container{
+    width: 40%;
+    max-width: 450px;
+    padding: 3rem;
+    border: 3px solid rgb(119, 64, 13);
+    border-radius: 1rem;
+    position: relative;
+    box-shadow: 0 8px 16px #0000006e;
+}
+h1{
+    text-align: center;
+    font-size: 3rem;
+}
+span{
+    color: rgb(17, 15, 16);
+}
+.buttons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+button{
+    width: 33.33%;
+    padding: 1rem;
+    border: 2px solid rgb(8, 7, 8);
+    border-radius: 1rem;
+    outline: none;
+    background-color: #442f0f;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #fff;
+    transition: all 0.5s ease;
+    cursor: pointer;
+}
+button:hover{
+    background-color: #fff;
+    color: #634a24;
+    border: 2px solid #634a24;
+}
+button:disabled{
+    background-color: #fff;
+    color: #cea76d;
+    border-color: #fff;
+    cursor: not-allowed;
+}
+#msg{
+    font-size: 1.2rem;
+    color: black;
+    background-color: #fff;
+    display: block;
+    width: 50%;
+    text-align: center;
+    padding: 0.5rem;
+    border: 2px solid #634a24;
+    position: absolute;
+    top: -20px;
+    left: 25%;
+    transition: all 0.5s ease;
+    border-radius: 1rem;
+    opacity: 0;
+} 
+#msg.show{
+    opacity: 1;
+}
+@media (max-width: 768px) {
+    .container {
+        width: 70%;
+        padding: 2.5rem;
+    }
+
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    button {
+        font-size: 0.9rem;
+        padding: 0.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 1rem;
+    }
+
+    .container {
+        width: 100%;
+        padding: 2rem 1rem;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    .buttons {
+        gap: 0.5rem;
+    }
+
+    button {
+        width: 33.33%;
+        padding: 0.8rem 0.3rem;
+        font-size: 0.8rem;
+    }
+
+    #msg {
+        width: 70%;
+        left: 15%;
+        font-size: 1rem;
+    }
+}
